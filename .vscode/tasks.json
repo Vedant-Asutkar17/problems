@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build & Run C++ (input.txt → output.txt)",
+            "type": "shell",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "C:\\MinGW\\bin\\g++.exe -std=c++17 ${file} -o ${fileBasenameNoExtension}.exe && ${fileBasenameNoExtension}.exe < input.txt > output.txt"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
